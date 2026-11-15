@@ -23,7 +23,7 @@ run.bat
 
 ---
 
-### Вариант 2: Ручной запуск через консоль
+### Вариант 2: Ручной запуск через консоль (SQLite)
 ```bash
 # 1. Клонирование и настройка окружения
 cp .env.example .env
@@ -37,6 +37,38 @@ php artisan migrate:fresh --seed
 php artisan serve --port=8000
 ```
 Открыть в браузере: `http://127.0.0.1:8000`
+
+---
+
+### Вариант 3: Запуск с PostgreSQL & pgAdmin 4 (Для защиты в колледже)
+
+Проект полностью кроссплатформенный и готов к работе с PostgreSQL через pgAdmin 4:
+
+1. **Создайте базу в pgAdmin 4:**
+   * Откройте **pgAdmin 4**, подключитесь к серверу PostgreSQL.
+   * Нажмите правой кнопкой на `Databases` ➔ `Create` ➔ `Database...` ➔ введите имя `nordic_huts`.
+
+2. **Способ A — Через консоль Laravel (Рекомендуется):**
+   * В файле `.env` переключите настройки подключения:
+     ```env
+     DB_CONNECTION=pgsql
+     DB_HOST=127.0.0.1
+     DB_PORT=5432
+     DB_DATABASE=nordic_huts
+     DB_USERNAME=postgres
+     DB_PASSWORD=postgres
+     ```
+   * Выполните миграции и сидеры:
+     ```bash
+     php artisan migrate:fresh --seed
+     ```
+
+3. **Способ B — Прямой импорт готового дампа в pgAdmin 4 (Без консоли):**
+   * В репозитории подготовлен готовый SQL-скрипт: **`database/pgadmin_setup.sql`**.
+   * В pgAdmin 4 выберите базу `nordic_huts` ➔ откройте **Tools ➔ Query Tool**.
+   * Откройте файл `database/pgadmin_setup.sql` и нажмите **Execute (F5)**.
+   * Все таблицы (3NF), внешние ключи, индексы и демо-данные создадутся за 1 секунду.
+   * *(Для показа преподу: нажмите правой кнопкой на таблицу `houses` ➔ `Generate ERD` для красивой схемы связей 1:N и N:M).*
 
 ---
 
