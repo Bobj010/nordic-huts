@@ -93,4 +93,20 @@ class House extends Model
         $avg = $this->reviews()->where('is_published', true)->avg('rating');
         return $avg ? round((float)$avg, 1) : 5.0;
     }
+
+    /**
+     * House image URL with asset helper support.
+     */
+    public function getImageUrlAttribute(?string $value): string
+    {
+        if (empty($value)) {
+            return asset('images/houses/a-frame-1.jpg');
+        }
+
+        if (str_starts_with($value, 'http://') || str_starts_with($value, 'https://')) {
+            return $value;
+        }
+
+        return asset(ltrim($value, '/'));
+    }
 }

@@ -90,7 +90,7 @@ class DatabaseSeeder extends Seeder
             'price_per_night' => 9500.00,
             'capacity' => 2,
             'area' => 42,
-            'image_url' => 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80',
+            'image_url' => 'images/houses/a-frame-1.jpg',
             'is_featured' => true,
             'is_active' => true,
         ]);
@@ -106,7 +106,7 @@ class DatabaseSeeder extends Seeder
             'price_per_night' => 11000.00,
             'capacity' => 4,
             'area' => 55,
-            'image_url' => 'https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=80',
+            'image_url' => 'images/houses/a-frame-2.jpg',
             'is_featured' => true,
             'is_active' => true,
         ]);
@@ -122,7 +122,7 @@ class DatabaseSeeder extends Seeder
             'price_per_night' => 13500.00,
             'capacity' => 2,
             'area' => 38,
-            'image_url' => 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=80',
+            'image_url' => 'images/houses/dome-1.jpg',
             'is_featured' => true,
             'is_active' => true,
         ]);
@@ -138,7 +138,7 @@ class DatabaseSeeder extends Seeder
             'price_per_night' => 12000.00,
             'capacity' => 2,
             'area' => 36,
-            'image_url' => 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80',
+            'image_url' => 'images/houses/dome-2.jpg',
             'is_featured' => false,
             'is_active' => true,
         ]);
@@ -154,7 +154,7 @@ class DatabaseSeeder extends Seeder
             'price_per_night' => 16500.00,
             'capacity' => 6,
             'area' => 85,
-            'image_url' => 'https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=1200&q=80',
+            'image_url' => 'images/houses/chalet-1.jpg',
             'is_featured' => true,
             'is_active' => true,
         ]);
@@ -170,7 +170,7 @@ class DatabaseSeeder extends Seeder
             'price_per_night' => 14000.00,
             'capacity' => 4,
             'area' => 70,
-            'image_url' => 'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=80',
+            'image_url' => 'images/houses/chalet-2.jpg',
             'is_featured' => false,
             'is_active' => true,
         ]);

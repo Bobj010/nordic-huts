@@ -26,5 +26,11 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 
+# Internal planning & AI configs
+AGENTS.md
+.agents/
+docs/
+
+
 
 
